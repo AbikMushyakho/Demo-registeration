@@ -17,9 +17,13 @@
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    padding: 0px 20px;
+    padding:35px 20px;
     /* margin-top: 50px; */
     border-radius: 10px;
+}
+.form>h2{
+    padding: 0;
+    margin: 0;
 }
 
 .label {
@@ -77,10 +81,34 @@
 }
 
 .listItem {
-    margin-top: 5px;
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.listItem>div {
+    padding: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 4px;
+    width: 80%;
     text-align: center;
+}
 
+.listItem>div>span {
+    margin-left: 10px;
+    text-align: start;
+    width: 100%;
+}
+
+.listItem>div>img:hover {
+    /* color: black; */
+    background-color: lightseagreen;
+    border-radius: 10rem;
 }
