@@ -62,9 +62,9 @@ export default function Home({ message }: AppProps): JSX.Element {
         <h3 className={styles.listTitle}>Registered Users</h3>
         <ul className={styles.unOrdered}>
           {userList.length > 0 ? (
-            userList.map((user) => {
+            userList.map((user,index) => {
               return (
-                <li className={styles.listItem}>
+                <li key={index} className={styles.listItem}>
                   {user.name} of age {user.age}
                 </li>
               );
