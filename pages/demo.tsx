@@ -3,6 +3,7 @@ import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Demo.module.css";
 import { ToastContainer, toast } from "react-toastify";
+import Image from "next/image";
 
 type AppProps = {
   message: string;
@@ -157,11 +158,15 @@ export default function Home({ message }: AppProps): JSX.Element {
                       >
                         {user.name} of age {user.age}
                       </span>
-                      <img
+                      <Image
                         onClick={(e) => handleDeleteClick(user)}
-                        width="20px"
-                        height="20px"
-                        src="https://img.icons8.com/color/48/null/delete-forever.png"
+                        // sizes="20px"
+                        width="20"
+                        height="20"
+                        alt={`${user.name} delete`}
+                        src={
+                          "https://img.icons8.com/color/48/null/delete-forever.png"
+                        }
                       />
                     </div>
                   </li>
