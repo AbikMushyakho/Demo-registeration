@@ -148,13 +148,13 @@ export default function Home({ message }: AppProps): JSX.Element {
             {userList.length > 0 ? (
               userList.map((user, index) => {
                 return (
-                  <li
-                    key={index}
-                    className={styles.listItem}
-                    onClick={(e) => setUser({ name: user.name, age: user.age })}
-                  >
+                  <li key={index} className={styles.listItem}>
                     <div>
-                      <span>
+                      <span
+                        onClick={(e) =>
+                          setUser({ name: user.name, age: user.age })
+                        }
+                      >
                         {user.name} of age {user.age}
                       </span>
                       <img
