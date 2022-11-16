@@ -1,11 +1,11 @@
-import type AppProps from "next/app";
+import React from "react";
 import Header from "./Header";
 
-const Layout = (props:any): JSX.Element => {
+const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
   return (
     <>
       <Header />
-      {props.children}
+      {children}
     </>
   );
 };
